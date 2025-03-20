@@ -4,7 +4,7 @@ VERSION = 0.3
 # Customize below to fit your system
 
 # paths
-CROSS_COMPILE ?= /usr/bin/aarch64-linux-gnu-
+CROSS_COMPILE ?= /usr/bin/
 CC = ${CROSS_COMPILE}gcc
 SYSROOT	?= $(shell ${CC} --print-sysroot)
 
