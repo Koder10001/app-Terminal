@@ -4,7 +4,8 @@ VERSION = 0.3
 # Customize below to fit your system
 
 # paths
-CROSS_COMPILE ?= /opt/miyoomini83/bin/arm-linux-gnueabihf-
+# CROSS_COMPILE ?= /usr/bin/aarch64-linux-gnu-
+CROSS_COMPILE ?= /usr/bin/
 CC = ${CROSS_COMPILE}gcc
 SYSROOT	?= $(shell ${CC} --print-sysroot)
 
@@ -14,7 +15,7 @@ LIBS = -lc -L${SYSROOT}/usr/lib -lSDL -lpthread -Wl,-Bstatic,-lutil,-Bdynamic
 
 # flags
 CPPFLAGS = -DVERSION=\"${VERSION}\"
-CFLAGS = -Os -marm -mtune=cortex-a7 -march=armv7ve+simd -mfpu=neon-vfpv4 -mfloat-abi=hard
+# CFLAGS = -Os -mtune=cortex-a55 -march=armv8-a
 CFLAGS += ${INCS} ${CPPFLAGS} -DMIYOOMINI -std=gnu11
 CFLAGS += -fPIC -ffunction-sections -fdata-sections -Wall
 LDFLAGS = ${LIBS} -Wl,--gc-sections -s
