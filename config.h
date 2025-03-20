@@ -11,7 +11,7 @@ static int fontsize = 8;
 static int borderpx = 2;
 static int initial_width = 320;
 static int initial_height = 240;
-static char shell[] = "/bin/sh";
+static char shell[] = "/bin/bash";
 
 /* double-click timeout (in milliseconds) between clicks for selection */
 static unsigned int doubleclicktimeout = 300;

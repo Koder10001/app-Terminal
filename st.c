@@ -2381,7 +2381,7 @@ void sdlshutdown(void)
     if (SDL_WasInit(SDL_INIT_EVERYTHING) != 0) {
         fprintf(stderr, "SDL shutdown\n");
         if (thread)
-            SDL_KillThread(thread);
+            //SDL_KillThread(thread);
         if (xw.win)
             SDL_FreeSurface(xw.win);
 #ifdef MIYOOMINI
@@ -2985,7 +2985,7 @@ void run(void)
         xflip();
     }
 
-    SDL_KillThread(thread);
+    //SDL_KillThread(thread);
 }
 
 int main(int argc, char *argv[])
